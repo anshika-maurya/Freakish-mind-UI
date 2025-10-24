@@ -20,8 +20,8 @@
 }
 html,
 body {
-  width: vw;
-  height: vh;
+  width: 100vw;
+  height: 100vh;
   font-family: "MyFont", sans-serif;
   overflow-x: hidden;
 }
@@ -105,16 +105,33 @@ main {
         cursor: pointer;
       }
     }
-    
+    @media (min-width: 990px) {
+      nav {
+        .burgur {
+          display: none;
+        }
+      }
+    }
+    @media (max-width: 990px) {
+      nav {
+        justify-content: space-between;
+        padding: 2rem 1rem;
+        .mid-nav {
+          display: none;
+        }
+        .btn-nav {
+          display: none;
+        }
+      }
+    }
+
     .main-container {
-        @include flex-center();
-        flex-direction: column;
-      
+      @include flex-center();
+      flex-direction: column;
 
       .first-container {
         @include flex-center();
         flex-direction: column;
-       
 
         p {
           font-size: 3.4rem;
@@ -136,14 +153,31 @@ main {
           bottom: 18%;
         }
       }
+      @media (max-width: 990px) {
+        .first-container {
+          padding-left: 1rem;
+          p {
+            font-size: 2.5rem;
+          }
+          h1 {
+            font-size: 3.05rem;
+          }
+          img {
+            height: 6rem;
+            width: 7rem;
+
+            left: -29%;
+            bottom: 3%;
+          }
+        }
+      }
 
       .container-side {
         display: flex;
         flex-direction: row;
         align-items: flex-start;
         justify-content: center;
-        
-        
+
         .left-side {
           display: flex;
           flex-direction: column;
@@ -154,8 +188,7 @@ main {
           border: none;
           border-radius: 50%;
           position: relative;
-           bottom: 30%;
-          
+          bottom: 30%;
 
           .arc {
             position: relative;
@@ -199,7 +232,6 @@ main {
             border-radius: 50%;
             position: relative;
             z-index: 1; /* keeps image on top */
-           
           }
 
           p {
@@ -215,10 +247,9 @@ main {
           @include flex-center();
           position: relative;
           bottom: 34%;
-          
 
           img {
-          width: 62%;
+            width: 62%;
             margin-top: 8px;
           }
         }
@@ -265,9 +296,45 @@ main {
           }
         }
       }
+      @media (max-width: 990px) {
+        .container-side {
+          display: flex;
+          flex-direction: column;
+
+          .left-side {
+            left: 37%;
+            bottom: 0;
+            gap: 0.4rem;
+            width: 6rem;
+            height: 6rem;
+
+            p {
+              text-align: center;
+              left: -48%;
+            }
+          }
+          .center-side {
+            bottom: -30%;
+
+            img {
+              width: 90%;
+              margin-top: 0;
+            }
+          }
+          .right-side {
+            flex-direction: row;
+            width: 8%;
+            bottom: 50%;
+            left: 46%;
+
+            .right-content {
+              border-bottom: none;
+            }
+          }
+        }
+      }
     }
   }
-
 
   .section2 {
     width: 100%;
@@ -328,6 +395,30 @@ main {
         .btn1 {
           background-color: transparent;
           color: #fdfdfd;
+        }
+      }
+    }
+    @media (max-width: 990px) {
+      .head-container {
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 2rem;
+        gap: 1rem;
+
+        .headings-container {
+          img {
+            display: none;
+          }
+        }
+        p {
+          width: 80%;
+        }
+
+        .button {
+          button {
+            width: 3rem;
+            height: 3rem;
+          }
         }
       }
     }
@@ -432,6 +523,24 @@ main {
           position: relative;
           left: -12%;
           color: #fdfdfde6;
+        }
+      }
+    }
+    @media (max-width: 990px) {
+      .mid-container {
+        flex-direction: column;
+
+        padding: 0;
+        margin-top: 2rem;
+
+        .card {
+          gap: 2rem;
+          margin-top: 2.5rem;
+          width: 90%;
+        }
+
+        .card-foot {
+          bottom: 15%;
         }
       }
     }

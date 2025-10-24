@@ -19,8 +19,8 @@
 
 html,
 body {
-  width: vw;
-  height: vh;
+  width: 100vw;
+  height: 100vh;
   font-family: "MyFont", sans-serif;
   overflow-x: hidden;
 }
@@ -99,6 +99,23 @@ main .section1 nav button:hover {
   font-weight: 1rem;
   cursor: pointer;
 }
+@media (min-width: 990px) {
+  main .section1 nav .burgur {
+    display: none;
+  }
+}
+@media (max-width: 990px) {
+  main .section1 nav {
+    justify-content: space-between;
+    padding: 2rem 1rem;
+  }
+  main .section1 nav .mid-nav {
+    display: none;
+  }
+  main .section1 nav .btn-nav {
+    display: none;
+  }
+}
 main .section1 .main-container {
   display: flex;
   align-items: center;
@@ -128,6 +145,23 @@ main .section1 .main-container .first-container img {
   position: relative;
   left: -40%;
   bottom: 18%;
+}
+@media (max-width: 990px) {
+  main .section1 .main-container .first-container {
+    padding-left: 1rem;
+  }
+  main .section1 .main-container .first-container p {
+    font-size: 2.5rem;
+  }
+  main .section1 .main-container .first-container h1 {
+    font-size: 3.05rem;
+  }
+  main .section1 .main-container .first-container img {
+    height: 6rem;
+    width: 7rem;
+    left: -29%;
+    bottom: 3%;
+  }
 }
 main .section1 .main-container .container-side {
   display: flex;
@@ -232,6 +266,39 @@ main .section1 .main-container .container-side .right-side .right-content p {
   font-size: 0.8rem;
   text-align: center;
 }
+@media (max-width: 990px) {
+  main .section1 .main-container .container-side {
+    display: flex;
+    flex-direction: column;
+  }
+  main .section1 .main-container .container-side .left-side {
+    left: 37%;
+    bottom: 0;
+    gap: 0.4rem;
+    width: 6rem;
+    height: 6rem;
+  }
+  main .section1 .main-container .container-side .left-side p {
+    text-align: center;
+    left: -48%;
+  }
+  main .section1 .main-container .container-side .center-side {
+    bottom: -30%;
+  }
+  main .section1 .main-container .container-side .center-side img {
+    width: 90%;
+    margin-top: 0;
+  }
+  main .section1 .main-container .container-side .right-side {
+    flex-direction: row;
+    width: 8%;
+    bottom: 50%;
+    left: 46%;
+  }
+  main .section1 .main-container .container-side .right-side .right-content {
+    border-bottom: none;
+  }
+}
 main .section2 {
   width: 100%;
   background-color: #000000;
@@ -288,6 +355,24 @@ main .section2 .head-container .button button i {
 main .section2 .head-container .button .btn1 {
   background-color: transparent;
   color: #fdfdfd;
+}
+@media (max-width: 990px) {
+  main .section2 .head-container {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 2rem;
+    gap: 1rem;
+  }
+  main .section2 .head-container .headings-container img {
+    display: none;
+  }
+  main .section2 .head-container p {
+    width: 80%;
+  }
+  main .section2 .head-container .button button {
+    width: 3rem;
+    height: 3rem;
+  }
 }
 main .section2 .mid-container {
   display: flex;
@@ -380,4 +465,19 @@ main .section2 .mid-container .card-foot p {
   position: relative;
   left: -12%;
   color: rgba(253, 253, 253, 0.9019607843);
+}
+@media (max-width: 990px) {
+  main .section2 .mid-container {
+    flex-direction: column;
+    padding: 0;
+    margin-top: 2rem;
+  }
+  main .section2 .mid-container .card {
+    gap: 2rem;
+    margin-top: 2.5rem;
+    width: 90%;
+  }
+  main .section2 .mid-container .card-foot {
+    bottom: 15%;
+  }
 }/*# sourceMappingURL=styles.css.map */
