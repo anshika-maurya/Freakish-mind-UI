@@ -20,9 +20,10 @@
 }
 html,
 body {
-  width: 100%;
-  height: 100%;
+  width: vw;
+  height: vh;
   font-family: "MyFont", sans-serif;
+  overflow-x: hidden;
 }
 @mixin flex-center() {
   display: flex;
@@ -104,6 +105,7 @@ main {
         cursor: pointer;
       }
     }
+    
     .main-container {
         @include flex-center();
         flex-direction: column;
@@ -129,9 +131,9 @@ main {
         img {
           height: 11rem;
           width: 11rem;
-          position: absolute;
-          left: 27%;
-          bottom: 51%;
+          position: relative;
+          left: -40%;
+          bottom: 18%;
         }
       }
 
@@ -139,10 +141,9 @@ main {
         display: flex;
         flex-direction: row;
         align-items: flex-start;
-        justify-content: space-around;
-        gap: 3rem;
+        justify-content: center;
         
-
+        
         .left-side {
           display: flex;
           flex-direction: column;
@@ -153,6 +154,7 @@ main {
           border: none;
           border-radius: 50%;
           position: relative;
+           bottom: 30%;
           
 
           .arc {
@@ -197,6 +199,7 @@ main {
             border-radius: 50%;
             position: relative;
             z-index: 1; /* keeps image on top */
+           
           }
 
           p {
@@ -211,11 +214,11 @@ main {
         .center-side {
           @include flex-center();
           position: relative;
-          bottom: -4%;
+          bottom: 34%;
           
 
           img {
-            width: 100%;
+          width: 62%;
             margin-top: 8px;
           }
         }
@@ -227,7 +230,7 @@ main {
           object-fit: cover;
           object-position: center;
           position: relative;
-          bottom: -7%;
+          bottom: 29%;
 
           .explore-more {
             border: none;
@@ -264,6 +267,7 @@ main {
       }
     }
   }
+
 
   .section2 {
     width: 100%;
